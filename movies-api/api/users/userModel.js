@@ -37,7 +37,7 @@ UserSchema.statics.findByUserName = function (username) {
 };
 
 UserSchema.methods.comparePassword = async function (passw) { 
-  return await bcrypt.compare(passw, tihs.password); 
+  return await bcrypt.compare(passw, this.password); 
 };
 
 export default mongoose.model('User', UserSchema);
